@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição If</title>
+</head>
+<body>
+    <h1>Média alunos</h1>
+    Informe a primeira nota: <input type="number" name="nota1" id="nota1"><p>
+    Informe a segunda nota: <input type="number" name="nota2" id="nota2"><p>
+    Informe a terceira nota: <input type="number" name="nota3" id="nota3"><p>   
+    <input type="button" value="Obter status" onclick="calcular()">
+    <div id="result">
+
+    </div>
+    <script>
+        function calcular(){
+            var nota = [6];
+            //Captura os dados do input
+            nota[0] = window.document.querySelector('input#nota1');
+            nota[1] = window.document.querySelector('input#nota2');
+            nota[2] = window.document.querySelector('input#nota3');
+            //Captura os dados que foram coletados do input
+            nota[3] = Number(nota[0].value);
+            nota[4] = Number(nota[1].value);
+            nota[5] = Number(nota[2].value);
+            //Retorna na tela o resultado do calculo da média
+            var res = window.document.querySelector('div#result');
+            //Calcula a média das notas informadas
+            var media = (nota[3] + nota[4] + nota[5]) / 3;
+            //Retorna na tela o status do aluno conforme a média alcançada
+            res.innerHTML = `<p>A média do aluno é ${media}.`;
+            if (media >= 7) {
+                res.innerHTML += `<p>O aluno está <strong>Aprovado</strong>`;
+            }
+            if (media >= 5 && media < 7) {
+                res.innerHTML += `<p>O aluno está de <strong>Recuperação</strong>.`;
+            }
+            if (media < 5) {
+                res.innerHTML += `<p>O aluno está <strong>Reprovado</strong>.`;
+            }
+        }
+    </script>
+</body>
+</html>
