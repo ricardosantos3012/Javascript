@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema eletrônico de voto.</h1>
+    </header>
+    <section>
+        <div>
+            <p>Lista de candidatos:</p>
+            <p>12 - Candidato A.</p>
+            <p>15 - Candidato B.</p>
+            <p>Informe o número do candidato:</p>
+            <p><input type="number" name="candidato" id="candidato" min="0"></p>
+            <p>
+                <input type="button" value="Confirma" onclick="confirma()">
+                <input type="button" value="Branco" onclick="branco()">
+                <input type="button" value="Resultado" onclick="res()">
+                <input type="button" value="Limpar" onclick="limpar()">
+            </p>
+        </div>
+        <div id="res1"></div>
+        <div id="res2"></div>
+        <div id="res3"></div>
+        <div id="res4"></div>
+        <div id="vencedor"></div>
+    </section>
+    <footer>
+        <p>&copy;Ricardo Santos</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
